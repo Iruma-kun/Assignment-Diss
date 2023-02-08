@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMEER IPL</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY8VwKDokq5-KYofqidfzBpIiQR6bvhEVlEA&usqp=CAU">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* // ~~~~~~~~~~~~~~~~~~~~~~~  topbar start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: #d8d1d1;
+            scroll-behavior: smooth;
+        }
+
+        #topbar {
+            display: flex;
+            background: linear-gradient(92.04deg, #18184A 24.18%, #19398A 50.95%, #18184A 110.32%);
+            box-shadow: 0 4px 8px 0 hsl(0deg 0% 7% / 50%);
+            width: 100%;
+            z-index: 10;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 8px 1%;
+        }
+
+        #left-menu {
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        #logo {
+            font-size: 36px;
+            font-weight: 400;
+            margin-right: 16px;
+        }
+
+        #left-menu>a {
+            text-decoration: none;
+            color: white;
+            margin-left: 32px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-left: 7rem;
+            width: 60%;
+        }
+
+
+        #right-menu {
+            display: inline-flex;
+            justify-content: end;
+        }
+
+        /* .mainsection {
+            width: 100%;
+        } */
+
+        .slick-dotted.slick-slider {
+            margin-bottom: 30px;
+            width: 98%;
+        }
+
+        .mainsection {
+            padding: 120px 0% 0% 0%;
+
+        }
+
+        #team {
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            font-size: xxx-large;
+        }
+
+        .topbar-logo {
+            width: 100%;
+            height: 17rem;
+        }
+
+        /* // ~~~~~~~~~~~~~~~~~~~~~~~  card section start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+
+        .card {
+            width: 100%;
+            max-width: 18%;
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px #ccc;
+            margin: 0% 7% 6%;
+            box-sizing: border-box;
+            text-align: center;
+
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+            box-shadow: 2px 2px 15px grey;
+        }
+
+        .card img {
+            width: 60%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: 2rem 0rem 0rem;
+            transform: none;
+        }
+        .card img:hover{
+            transform: none;
+        }
+
+        .card .info {
+            padding-bottom: 10px;
+            text-align: center;
+            transform: none;
+        }
+
+        h2 {
+            margin: 6rem 0rem 2rem;
+            color: white;
+            font-size: 2em;
+            letter-spacing: 2px;
+            transform: none;
+        }
+
+        #dresses {
+            padding: 4% 8% 0;
+        }
+
+        #accessories {
+            padding: 4% 8% 0;
+        }
+
+        .div2 {
+            margin: 0% 14% 0%;
+        }
+
+        #Mumbai {
+            background: linear-gradient(180deg, #0078BC 0%, #17479E 100%);
+            border: 2px solid #17479E;
+        }
+
+        #Royal {
+            background: linear-gradient(180deg, #6A6A6A 0%, #1C1C1C 100%);
+            border: 2px solid #1C1C1C;
+        }
+
+        #Kolkata {
+            background: linear-gradient(180deg, #3B215D 0%, #552792 100%);
+            border: 2px px solid #552792;
+        }
+
+        #Kolkata>h2 {
+            margin-top: 12rem;
+
+        }
+
+        #Chennai {
+            background: linear-gradient(180deg, #FCCA06 0%, #F25C19 100%);
+            border: 2px solid #F25C19;
+        }
+
+        #Gujarat {
+            background: linear-gradient(180deg, #1C1C1C 0%, #0B4973 100%);
+            border: 2px solid #0B4973;
+        }
+
+        #Rajasthan {
+            background: linear-gradient(180deg, #EA1A85 0%, #001D48 100%);
+            border: 2px solid #001D48;
+        }
+
+        /* // ~~~~~~~~~~~~~~~~~~~~~~~  footer start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height: auto;
+            align-items: baseline;
+            flex-direction: row;
+            width: 100%;
+            text-align: center;
+            background-color: #19398a;
+            color: white;
+            position: absolute;
+            bottom: -73rem;
+
+
+        }
+
+        footer div {
+            line-height: 28px;
+            width: 14%;
+            justify-content: flex-end;
+            align-items: baseline;
+            text-align: start;
+
+        }
+
+        footer div a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            justify-content: flex-start;
+        }
+
+        span {
+            margin-bottom: 10px;
+            font-size: 21px;
+            letter-spacing: 4px;
+            font-weight: 600;
+        }
+
+        /*                     Extra large screens TV                   */
+        @media screen and (min-width: 1400px) {
+
+            /* // ~~~~~~~~~~~~~~~~~~~~~~~  topbar start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+            .topbar-logo {
+                width: 100%;
+                height: 33rem;
+            }
+
+            #left-menu>a {
+                text-decoration: none;
+                color: white;
+                margin-left: 32px;
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-left: 17rem;
+                width: 60%;
+            }
+
+            /* // ~~~~~~~~~~~~~~~~~~~~~~~  card section start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+
+            .card {
+                width: 100%;
+                max-width: 19%;
+                display: inline-block;
+                border-radius: 5px;
+                box-shadow: 0px 2px 5px #ccc;
+                margin: 0% 7% 6%;
+                box-sizing: border-box;
+                text-align: center;
+
+            }
+
+            .card:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+            box-shadow: 2px 2px 15px grey;
+        }
+            .card img {
+                width: 65%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                margin: 2rem 0rem 0rem;
+            }
+
+            .card .info {
+                /* padding-bottom: 10rem; */
+                text-align: center;
+            }
+
+            h2 {
+                margin: 15rem 0rem 2rem;
+                color: white;
+                font-size: 2em;
+                letter-spacing: 2px;
+            }
+
+            /* // ~~~~~~~~~~~~~~~~~~~~~~~  footer start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+            footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                height: auto;
+                align-items: baseline;
+                flex-direction: row;
+                width: 100%;
+                text-align: center;
+                background-color: #19398a;
+                color: white;
+                /* position: absolute; */
+                bottom: -90rem;
+
+
+            }
+
+            footer div {
+                line-height: 28px;
+                width: 19%;
+                justify-content: flex-end;
+                align-items: baseline;
+                text-align: start;
+                font-size: 30px;
+
+            }
+
+            footer div a {
+                display: flex;
+                text-decoration: none;
+                color: white;
+                justify-content: flex-start;
+                font-size: 22px;
+            }
+
+            span {
+                margin-bottom: 10px;
+                font-size: 21px;
+                letter-spacing: 4px;
+                font-weight: 600;
+                margin: 17px 0px 19px;
+            }
+        }
+
+        /*                    Desktops, large screens                           */
+        @media screen and (min-width: 1025px) and (max-width: 1200px) {
+            /* // ~~~~~~~~~~~~~~~~~~~~~~~  card section start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+
+            .card {
+                width: 100%;
+                max-width: 18%;
+                display: inline-block;
+                border-radius: 5px;
+                box-shadow: 0px 2px 5px #ccc;
+                margin: 0% 7% 6%;
+                box-sizing: border-box;
+                text-align: center;
+
+            }
+
+            .card img {
+                width: 60%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                margin: 2rem 0rem 0rem;
+            }
+
+            .card .info {
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            h2 {
+                margin: 6rem 0rem 2rem;
+                color: white;
+                font-size: 2em;
+                letter-spacing: 2px;
+            }
+
+            /* // ~~~~~~~~~~~~~~~~~~~~~~~  footer start  ~~~~~~~~~~~~~~~~~~~~~~~ \\ */
+            footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                height: auto;
+                align-items: baseline;
+                flex-direction: row;
+                width: 100%;
+                text-align: center;
+                background-color: #19398a;
+                color: white;
+                position: absolute;
+                bottom: -73rem;
+
+
+            }
+
+            footer div {
+                line-height: 28px;
+                width: 14%;
+                justify-content: flex-end;
+                align-items: baseline;
+                text-align: start;
+
+            }
+
+            footer div a {
+                display: flex;
+                text-decoration: none;
+                color: white;
+                justify-content: flex-start;
+            }
+
+            span {
+                margin-bottom: 10px;
+                font-size: 21px;
+                letter-spacing: 4px;
+                font-weight: 600;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="topbar">
+            <div id="logo">
+                <img id="ipl-logo-1" src="https://www.iplt20.com/assets/images/ipl-logo-new-old.png" alt="ipl-logo">
+            </div>
+            <div id="left-menu">
+                <a href="#">MATCHES</a>
+                <a href="#">STATS</a>
+                <a href="#">TEAMS</a>
+                <a href="#">NEWS</a>
+                <a href="#">MORE</a>
+            </div>
+
+            <div id="right-menu">
+                <img src="	https://www.iplt20.com/assets/images/viewers-choice.svg" alt="ipl-logo-2">
+            </div>
+        </nav>
+    </header>
+    <div class="mainsection">
+        <div>
+            <img class="topbar-logo" src="1.png" alt="thirdpic">
+        </div>
+        <div>
+            <img class="topbar-logo" src="2.png" alt="secondpic">
+        </div>
+
+        <div>
+            <img class="topbar-logo" src="3.png" alt="fourthpic">
+        </div>
+        <div>
+            <img class="topbar-logo" src="4.png" alt="fifthpic">
+        </div>
+        <div>
+            <img class="topbar-logo" src="5.png" alt="firtpic">
+        </div>
+    </div>
+
+    <section id="team">
+        <h1>Silect Your Team</h1>
+    </section>
+    <footer>
+        <div>
+            <p class="footer-heading">TEAMS</p>
+            <a href="#" class="footer-link">Chennai Super Kings</a>
+            <a href="#" class="footer-link">Gujarat Titans</a>
+            <a href="#" class="footer-link">Kolkata Knight Riders</a>
+            <a href="#" class="footer-link">Mumbai Indians</a>
+            <a href="#" class="footer-link">Rajasthan Royals</a>
+            <a href="#" class="footer-link">Royal Challengers Bangalore</a>
+        </div>
+        <div>
+            <p class="footer-heading">CONTACTS</p>
+            <a href="#" class="footer-link">Contact Us</a>
+            <a href="#" class="footer-link">Sponsorship</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+        <div>
+            <p class="footer-heading">GUIDELINES</p>
+            <a href="#" class="footer-link">Governing Council</a>
+            <a href="#" class="footer-link">Match Playing Conditions</a>
+            <a href="#" class="footer-link">PMOA Minimum Standard</a>
+            <a href="#" class="footer-link">Suspect Action Policy</a>
+        </div>
+        <div>
+            <p class="footer-heading">ABOUT</p>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Anti Doping Policy</a>
+            <a href="#" class="footer-link">Image Use Terms</a>
+        </div>
+
+        <span>Copyright © SAMEER RAUT IPL All Rights Reserved.</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="sir_ne_ba.js"></script>
+</body>
+
+</html>

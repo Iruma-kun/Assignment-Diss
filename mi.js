@@ -1,0 +1,371 @@
+$(document).ready(function () {
+
+    let playerList =[
+    {
+        "id": 0,
+        "playerName": "Arjun Tendulkar",
+        "from": "MI",
+        "price": "30 L",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/10244.png"
+    },
+    {
+        "id": 1,
+        "playerName": "Suryakumar Yadav",
+        "from": "MI",
+        "price": "8 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/108.png"
+    },
+    {
+        "id": 2,
+        "playerName": "Ramandeep Singh",
+        "from": "MI",
+        "price": "20 L",
+        "isPlaying": false,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/20595.png"
+    },
+    {
+        "id": 3,
+        "playerName": "Rohit Sharma",
+        "from": "MI",
+        "price": "6.50 Cr",
+        "isPlaying": true,
+        "description": "BatsMan",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/107.png"
+    },
+    {
+        "id": 4,
+        "playerName": "Ishan Kishan",
+        "from": "MI",
+        "price": "2.50 Cr",
+        "isPlaying": true,
+        "description": "BatsMan",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/2975.png"
+    },
+    {
+        "id": 5,
+        "playerName": "Jasprit Bumrah",
+        "from": "MI",
+        "price": "12.00 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/1124.png"
+    },
+    {
+        "id": 6,
+        "playerName": "Glenn Maxwell",
+        "from": "RCB",
+        "price": "14.25 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/282.png"
+    },
+    {
+        "id": 7,
+        "playerName": "Virat Kohli",
+        "from": "RCB",
+        "price": "8.00 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/164.png"
+    },
+    {
+        "id": 8,
+        "playerName": "Shahbaz Ahamad",
+        "from": "RCB",
+        "price": "2.4 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/13803.png"
+    },
+    {
+        "id": 9,
+        "playerName": "Mahipal Lomror",
+        "from": "RCB",
+        "price": "95 L",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/2970.png"
+    },
+    {
+        "id": 10,
+        "playerName": "Suyash Prabhudessai",
+        "from": "RCB",
+        "price": "30 L",
+        "isPlaying": false,
+        "description": "BatsMan",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/7002.png"
+    },
+    {
+        "id": 11,
+        "playerName": "Mohammed Siraj",
+        "from": "RCB",
+        "price": "7 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/3840.png"
+    },
+    {
+        "id": 12,
+        "playerName": "Riyan Parag",
+        "from": "RR",
+        "price": "3.80 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/4445.png"
+    },
+    {
+        "id": 13,
+        "playerName": "Navdeep Saini",
+        "from": "RR",
+        "price": "2.6 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/3824.png"
+    },
+    {
+        "id": 14,
+        "playerName": "KC Cariappa",
+        "from": "RR",
+        "price": "20 L",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/2743.png"
+    },
+    {
+        "id": 15,
+        "playerName": "Yashasvi Jaiswal",
+        "from": "RR",
+        "price": "2.40 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/13538.png"
+    },
+    {
+        "id": 16,
+        "playerName": "Devdutt Padikkal",
+        "from": "RR",
+        "price": "7.75 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/5430.png"
+    },
+    {
+        "id": 17,
+        "playerName": "Sanju Samson",
+        "from": "RR",
+        "price": "8 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/258.png"
+    },
+    {
+        "id": 18,
+        "playerName": "MS Dhoni",
+        "from": "CSK",
+        "price": "12 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/1.png"
+    },
+    {
+        "id": 19,
+        "playerName": "Ruturaj Gaikwad",
+        "from": "CSK",
+        "price": "6 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/5443.png"
+    },
+    {
+        "id": 20,
+        "playerName": "Ravindra Jadeja",
+        "from": "CSK",
+        "price": "16 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/9.png"
+    },
+    {
+        "id": 21,
+        "playerName": "Subhranshu Senapati",
+        "from": "CSK",
+        "price": "20 L",
+        "isPlaying": false,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/20574.png"
+    },
+    {
+        "id": 22,
+        "playerName": "Devon Conway",
+        "from": "CSK",
+        "price": "6 Cr",
+        "isPlaying": true,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/20572.png"
+    },
+    {
+        "id": 23,
+        "playerName": "Deepak Chahar",
+        "from": "CSK",
+        "price": "14 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/140.png"
+    },
+    {
+        "id": 24,
+        "playerName": "Andre Russell",
+        "from": "KKR",
+        "price": "1.20 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/177.png"
+    },
+    {
+        "id": 25,
+        "playerName": "Venkatesh Iyer",
+        "from": "KKR",
+        "price": "8 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/8540.png"
+    },
+    {
+        "id": 26,
+        "playerName": "Sunil Narine",
+        "from": "KKR",
+        "price": "6 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/203.png"
+    },
+    {
+        "id": 27,
+        "playerName": "Rinku Singh",
+        "from": "KKR",
+        "price": "55 L",
+        "isPlaying": false,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/3830.png"
+    },
+    {
+        "id": 28,
+        "playerName": "Nitish Rana",
+        "from": "KKR",
+        "price": "3.40 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/2738.png"
+    },
+    {
+        "id": 39,
+        "playerName": "Anukul Roy",
+        "from": "KKR",
+        "price": "20 L",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/3774.png"
+    },
+    {
+        "id": 40,
+        "playerName": "Hardik Panya",
+        "from": "GT",
+        "price": "11 Cr",
+        "isPlaying": true,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/2740.png"
+    },
+    {
+        "id": 41,
+        "playerName": "David Miller",
+        "from": "GT",
+        "price": "75 L",
+        "isPlaying": false,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/187.png"
+    },
+    {
+        "id": 42,
+        "playerName": "Shubham Gill",
+        "from": "GT",
+        "price": "7 Cr",
+        "isPlaying": false,
+        "description": "Batsman",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/3761.png"
+    },
+    {
+        "id": 43,
+        "playerName": "Jayant Yadav",
+        "from": "GT",
+        "price": "1.70 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/1740.png"
+    },
+    {
+        "id": 44,
+        "playerName": "Rahul Tewatia",
+        "from": "GT",
+        "price": "9 Cr",
+        "isPlaying": false,
+        "description": "Bowler",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/1740.png"
+    },
+    {
+        "id": 45,
+        "playerName": "Vijay Shankar",
+        "from": "GT",
+        "price": "3.20 Cr",
+        "isPlaying": true,
+        "description": "All-rounder",
+        "preview": "https://assets.iplt20.com/ipl/IPLHeadshot2022/1083.png"
+    }
+];
+
+
+
+        // let batsMan = document.getElementById("teamA");
+        // let ballMan = document.getElementById("teamB");
+
+        for (let count = 0; count < 6; count++) {
+            let playerInfo = playerList[count];
+
+            let div1 = document.createElement("div");
+            div1.classList.add("card");
+           
+
+            let body = document.body;
+            body.append(div1);
+            div1.dataset.id=playerInfo.id
+            let img = document.createElement("img");
+            img.src = playerInfo.preview;
+
+            let info = document.createElement("div");
+            info.classList.add("info");
+
+            let h2 = document.createElement("h2");
+            h2.innerText = playerInfo.playerName;
+
+            let para = document.createElement("p");
+            para.innerText = "TEAM - " + playerInfo.from;
+
+            let span = document.createElement("span");
+            span.innerText = "PRICE " + playerInfo.price;
+
+            info.append(h2, para, span);
+
+            div1.append(img, info);
+
+            // if (playerInfo.isAccessory === true) {
+            //     access.append(div1);   
+            // } else {
+            //     clothes.append(div1);
+            // }
+        }
+
+})
